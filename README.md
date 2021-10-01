@@ -5,13 +5,13 @@ If you want to practice yourself there are 2 choices: Basketball Players API and
 They each have their own explanation in the files and there is also explanation below.
 
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+* Run the server
+  ```sh
+  node server.js
+  ```
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
+You need these for the project.
 * npm
   ```sh
   npm install npm@latest -g
