@@ -4,7 +4,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', function () {
+app.get('/', function (req, res) {
   res.send('hello there');
 });
 
