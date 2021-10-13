@@ -33,7 +33,29 @@ You need these for the project.
    ```
 ### Practice
    #### Basketball API
-      //todo
+  Sign up at rapidapi.com and then visit this link "https://rapidapi.com/theapiguy/api/free-nba"
+
+  api link's base is "https://free-nba.p.rapidapi.com/" (the link you fetch from)
+
+  Sample Code:
+   const axios = require("axios").default;
+
+   const options = {
+     method: 'GET',
+     url: 'https://free-nba.p.rapidapi.com/players',
+     params: {page: '0', per_page: '25', search: 'lebron'},
+     headers: {
+       'x-rapidapi-host': 'free-nba.p.rapidapi.com',
+       'x-rapidapi-key': '706f21a929msha2d95a17ec34dd7p1238f9jsnde2668804a60'
+     }
+   };
+  this will give you players with people whose first name are lebron
+
+  //copy your own code from the link (https://rapidapi.com/theapiguy/api/free-nba") with your own paramaters
    #### Covid API
-      //todo
+  Covid api link is "https://covid-api.mmediagroup.fr/v1"
+
+  To learn how to navigate and get your specific data, go to this link: "https://github.com/M-Media-Group/Covid-19-API/blob/master/README.md"
+
+  For example https://covid-api.mmediagroup.fr/v1/cases shows you cases
   
