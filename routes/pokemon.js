@@ -15,8 +15,6 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=20')
     });
     console.log(formattedArray, 'fetch is done');
     pokemons = formattedArray;
-
-    console.log(pokemons);
   });
 
 pokemonRouter.use(logger);
@@ -35,10 +33,9 @@ pokemonRouter.post('/', (req, res) => {
 pokemonRouter
   .route('/:pokemonID')
   .get((req, res) => {
-    const data = pokemons.find(
-      pokemon => pokemon.id === req.params.pokemonID
-    ).pokemon;
-    res.json(data);
+    const data = pokemons.find(pokemon => pokemon.id === req.params.pokemonID);
+    console.log(data, 'pokemon chosen');
+    res.json(data.pokemon);
   })
   .put((req, res) => {
     const newPokemonData = req.body.pokemonData;
