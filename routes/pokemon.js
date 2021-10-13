@@ -2,6 +2,7 @@ import express from 'express';
 const pokemonRouter = express.Router();
 import fetch from 'node-fetch';
 import { v4 as uuidv4 } from 'uuid';
+import { logger } from '../middlewares.js';
 
 let pokemons = [];
 
@@ -21,7 +22,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10&offset=20')
 pokemonRouter.use(logger);
 
 pokemonRouter.get('/', (req, res) => {
-  console.log(pokemons, 'oh sh');
+  console.log(pokemons, 'fetched all pokes');
   res.json(pokemons);
 });
 
@@ -53,10 +54,5 @@ pokemonRouter
     });
     res.json(pokemons);
   });
-
-function logger(req, res, next) {
-  console.log(req.originalUrl);
-  next();
-}
 
 export default pokemonRouter;

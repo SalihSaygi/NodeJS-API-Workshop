@@ -5,7 +5,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', function () {
-  res.send('fuck you');
+  res.send('hello there');
 });
 
 import pokemonRouter from './routes/pokemon.js';
@@ -15,5 +15,5 @@ import pokemonRouter from './routes/pokemon.js';
 app.use('/pokemons', pokemonRouter);
 // app.use('/covid', covidRouter);
 // app.use('/basketballPlayers', basketballPlayersRouter);
-console.log('running broo');
+console.log('server is running');
 app.listen(3000);
